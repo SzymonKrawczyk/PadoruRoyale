@@ -10,7 +10,7 @@ Go to https://szymonkrawczyk.github.io/PadoruRoyale/ ! :)
 
 Menu
 
-![Menu](readme-media/padoru.PNG)
+![Menu](readme-media/padoru1.PNG)
 
 Game Start
 
