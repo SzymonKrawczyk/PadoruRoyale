@@ -4,31 +4,33 @@ It's a local 2 player game, where you compete to be the last one standing!
 You can take damage from snowballs or presents (generated above you!)
 Good luck and have fun!
 
+Go to https://szymonkrawczyk.github.io/PadoruRoyale/ ! :)
+
 # Screenshots
 
 Menu
 
-![Menu](readme-media/padoru.png)
+![Menu](readme-media/padoru.PNG)
 
 Game Start
 
-![Game Start](readme-media/padoru2.png)
+![Game Start](readme-media/padoru2.PNG)
 
 Presents
 
-![Presents](readme-media/padoru3.png)
+![Presents](readme-media/padoru3.PNG)
 
 Damage taken (temporary shield)
 
-![Damage taken](readme-media/padoru4.png)
+![Damage taken](readme-media/padoru4.PNG)
 
 Player 2 is knocked out!
 
-![F](readme-media/padoru5.png)
+![F](readme-media/padoru5.PNG)
 
 Player 1 won!
 
-![gg](readme-media/padoru6.png)
+![gg](readme-media/padoru6.PNG)
 
 
 
