@@ -1,0 +1,271 @@
+/*
+    Created by Szymon Krawczyk 2019
+*/
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+
+	
+canvas {	
+	/* https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+	z-index: -10;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+#loadingText {
+		margin: auto; 
+		padding-top: 1.5%;
+		padding-left: 0.5%;
+		z-index: 100; 
+		text-align: center; 
+		font-size: 30px; 
+		font-family: Calibri;
+
+
+		position: fixed;
+  		top: 49%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+}
+
+#timerText {
+		margin: auto; 
+		padding-top: 1.5%;
+		padding-left: 0.5%;
+		z-index: 1000; 
+		text-align: center; 
+		visibility: hidden;
+		color: snow;
+		font-size: 500px; 
+		font-family: Calibri;  
+		text-shadow: black 2px 0px 0px, black 1.75517px 0.95885px 0px, black 1.0806px 1.68294px 0px, black 0.14147px 1.99499px 0px, black -0.83229px 1.81859px 0px, black -1.60229px 1.19694px 0px, black -1.97998px 0.28224px 0px, black -1.87291px -0.70157px 0px, black -1.30729px -1.5136px 0px, black -0.42159px -1.95506px 0px, black 0.56732px -1.91785px 0px, black 1.41734px -1.41108px 0px, black 1.92034px -0.55883px 0px;
+
+
+		position: fixed;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+}
+
+#restartButton {
+		position: absolute; 
+		margin: auto; 
+		z-index: 1000; 
+		text-align: center; 
+		bottom: 12%; 
+		visibility: hidden;
+		color: snow;
+		left: 45.5%; 
+		font-size: 140px; 
+		text-align: center;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		font-family: C"Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+		padding: 40px;
+		border-radius: 100%;
+		background-color: rgba(211,211,211 ,0.8);
+		border: 5px solid snow;
+		transition: 700ms;
+		text-shadow: black 2px 0px 0px, black 1.75517px 0.95885px 0px, black 1.0806px 1.68294px 0px, black 0.14147px 1.99499px 0px, black -0.83229px 1.81859px 0px, black -1.60229px 1.19694px 0px, black -1.97998px 0.28224px 0px, black -1.87291px -0.70157px 0px, black -1.30729px -1.5136px 0px, black -0.42159px -1.95506px 0px, black 0.56732px -1.91785px 0px, black 1.41734px -1.41108px 0px, black 1.92034px -0.55883px 0px;
+
+}
+
+#restartButton:hover {
+	transform: rotateZ(360deg);
+	transition: 500ms;
+	background-color: rgba(211,211,211 ,0.95);
+}
+
+
+#gameTitle {
+		position: absolute; 
+  		transform: translate(-50%, -50%);
+		margin: auto; 
+		z-index: 1100; 
+		text-align: center; 
+		top: 8%; 
+		visibility: hidden;
+		color: snow;
+		left: 50%; 
+		font-size: 130px; 
+		text-align: center;
+		width: 950px;
+		height: 70px;
+		line-height: 70px;
+		transition-timing-function: ease;
+		font-family: Calibri, sans-serif;  
+		padding: 40px;
+		transition: 900ms;
+		cursor: default;
+		text-shadow: black 4px 0px 0px, black 1.75517px 0.95885px 0px, black 1.0806px 1.68294px 0px, black 0.14147px 1.99499px 0px, black -0.83229px 1.81859px 0px, black -1.60229px 1.19694px 0px, black -1.97998px 0.28224px 0px, black -1.87291px -0.70157px 0px, black -1.30729px -1.5136px 0px, black -0.42159px -1.95506px 0px, black 0.56732px -1.91785px 0px, black 1.41734px -1.41108px 0px, black 1.92034px -0.55883px 0px;
+}
+
+#authorInfo {
+		position: fixed; 
+		background-color: rgba(255, 250, 240, 0.7);
+		z-index: 1200; 
+		border-left: 3px solid black;
+		border-top: 3px solid black;
+		border-top-left-radius: 10px;
+		text-align: center; 
+		bottom: 0%; 
+		color: snow;
+		right: 0%; 
+		font-size: 32px; 
+		text-align: center;
+		width: 280px;
+		height: 35px;
+		line-height: 35px;
+		font-family: Calibri, sans-serif;  
+		padding: 10px;
+		cursor: default;
+		text-shadow: black 2px 0px 0px, black 1.75517px 0.95885px 0px, black 1.0806px 1.68294px 0px, black 0.14147px 1.99499px 0px, black -0.83229px 1.81859px 0px, black -1.60229px 1.19694px 0px, black -1.97998px 0.28224px 0px, black -1.87291px -0.70157px 0px, black -1.30729px -1.5136px 0px, black -0.42159px -1.95506px 0px, black 0.56732px -1.91785px 0px, black 1.41734px -1.41108px 0px, black 1.92034px -0.55883px 0px;
+}
+
+.playerInfo {
+	position: absolute;
+	width: 250px;
+	height: 150px;
+	//background-color: rgba(255, 250, 240, 0.4);
+	background-color: rgba(100, 100, 100, 0.3);
+	padding: 10px;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+#info1 {
+	left: 0;
+	border-bottom-right-radius: 10px;
+	//padding: 0 10px 10px 0;
+}
+#info2 {
+	right: 0;
+	border-bottom-left-radius: 10px;
+	//padding: 0 0 10px 10px;
+}
+
+.playerInfoTop {
+	width: 100%;
+	height: 70%;
+	box-sizing: border-box;
+	//background-color: aqua;
+}
+
+.playerInfoBot {
+	width: 100%;
+	height: 30%;
+	box-sizing: border-box;
+	//background-color: green;
+	padding-top: 9px;
+}
+
+.playerInfoIMG {
+	height: 101px;
+	width: 101px;
+	border: 2px solid snow;
+	border-radius: 100%;
+	background-size: 100% 100%;
+}
+
+#playerInfoIMG1 {
+	float: left;
+	background-image: url("../media/padoruR.png");
+}
+
+#playerInfoIMG2 {
+	float: right;
+	background-image: url("../media/padoruG.png");
+	transform: scaleX(-1);
+	filter: FlipH;
+}
+
+
+.playerInfoHPA {
+	width: 135px;
+	height: 60px;
+	padding-top: 22px;
+	//background-color: orange;
+}
+
+#playerInfoHPA1 {
+	float: right;
+	padding-left: 10px;
+}
+
+#playerInfoHPA2 {
+	float: left;
+	padding-right: 10px;
+}
+
+
+.playerInfoHP {
+	height: 24px;
+	padding-top: 1px;
+	width: 100%;
+	float: left;
+	//background-color: red;
+}
+
+.HPimg {
+	background-size: 100% 100%;
+	width: 24px;
+	height: 22px;
+	margin-right: 3px;
+	background-image: url("../media/hp.png");
+	float: left;
+}
+
+.playerInfoA {
+	padding-top: 3px;
+	height: 22px;
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+	//background-color: blue;
+}
+
+.Aimg {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	background-color: snow;
+	border-radius: 100%;
+	border: 2px solid black;
+	float: left;
+}
+
+
+.playerInfoBoostContainer {
+	box-sizing: border-box;
+	width: 100%;
+	border: 5px solid snow;
+	padding: 8px;
+	border-radius: 16px;
+	//background-color: grey;
+	overflow: auto;
+}
+
+.playerInfoBoost {
+	height: 10px;
+	width: 80%;
+	min-width: 10px;
+	max-width: 100%;
+	border-radius: 5px;
+	background-color: yellow;
+}
+
+#playerInfoBoost2 {
+	float: right;
+}
